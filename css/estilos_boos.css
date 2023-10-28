@@ -1,3 +1,5 @@
+
+/*EDICION INICIAL DE LA PAGINA*/
 *{
     margin: 0;
     padding: 0 ;
@@ -9,6 +11,8 @@ body{
     font-size: 'Noto Serif', serif;
     background-color: rgb(199, 199, 79);
 }
+
+/*INCIDE RESPONSIVE CON BOOTSTRAP Y GRID, PARA TODA LA PAGINA*/
 
 .conteiner{
     margin: 0 auto;
@@ -128,4 +132,47 @@ body{
         color: #030303;
     }
     
+}
+
+.mapa{
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+
+/*FOOTER CON BOOTSTRAP*/
+
+.footer{
+    font-size: 17px;
+}
+
+a:hover {
+    color:crimson !important;
+}
+
+.iconos{
+    font-size: 30px;
+}
+
+/*GALERIA*/
+
+.ImagenStaff{
+    padding: 2vh;
+}
+.galeria{
+    width: 100%;
+    height: 300px;
+}
+.col-lg-3{
+    margin: 0 !important;
+    padding: 25px;
+}
+
+.galeria :hover {
+    border: 5px solid rgb(199, 199, 79);
+}
+
+/*NOSOTROS*/
+
+card{
+    background-color: rgb(199, 199, 79);
 }

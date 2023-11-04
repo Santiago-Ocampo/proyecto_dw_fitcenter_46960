@@ -1,34 +1,33 @@
-
 /*EDICION INICIAL DE LA PAGINA*/
-*{
+* {
     margin: 0;
-    padding: 0 ;
+    padding: 0;
     box-sizing: border-box;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-body{
+body {
     font-size: 'Noto Serif', serif;
     background-color: rgb(199, 199, 79);
 }
 
 /*INCIDE RESPONSIVE CON BOOTSTRAP Y GRID, PARA TODA LA PAGINA*/
 
-.conteiner{
+.conteiner {
     margin: 0 auto;
     width: 90%;
     max-width: 1200px;
 }
 
-.header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2)), url(../assets/img/recorte_header_dos.jpg);
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../assets/img/fondoHeader.jpg);
     background-size: cover;
     min-height: 300px;
     height: 50vh;
-    color:#fff;
+    color: #fff;
 }
 
-.nav{
+.nav {
     --state-Close: scale(0);
     --state-Hambur: scale(1);
     --state-menu: translate(-100%);
@@ -40,39 +39,40 @@ body{
     grid-template-columns: repeat(2, max-content);
 }
 
-.nav:target{
+.nav:target {
     --state-menu: translate(0);
     --state-Close: scale(1);
-    --state-Hambur:scale(0);
+    --state-Hambur: scale(0);
 }
 
 
-.nav_Hambur{
+.nav_Hambur {
     transform: var(--state-Hambur);
 }
 
-.nav_Close{
+.nav_Close {
     transform: var(--state-Close);
 }
 
 
-.nav_Logo{
+.nav_Logo {
     font-size: 2 rem;
     z-index: 1;
 }
 
 .nav_Hambur,
-.nav_Close{
+.nav_Close {
     cursor: pointer;
     grid-column: -2/-1;
     grid-row: 1/2;
     transition: .4s transform;
 }
 
-.nav_Icon{  width: 40px;
+.nav_Icon {
+    width: 40px;
 }
 
-.nav_Links{
+.nav_Links {
 
     background-color: #000000;
     position: absolute;
@@ -91,33 +91,34 @@ body{
     transition: .3s transform;
 }
 
-.nav-Item{
+.nav-Item {
     list-style: none;
 
 }
 
-.nav-Link{
+.nav-Link {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2 rem;
     letter-spacing: 2px;
+    font-weight: bolder;
 }
 
 @media (min-width:768px) {
 
-    .nav{
+    .nav {
         --state-Hambur: scale(0);
         --state-menu: translate(0);
     }
-    
-    .nav:target{
+
+    .nav:target {
         --state-Close: scale(0);
     }
 
-    .nav_Links{
+    .nav_Links {
 
         padding: 20;
-        background-color:unset;
+        background-color: unset;
         position: unset;
         gap: 1.5em;
         grid-auto-flow: column;
@@ -126,53 +127,100 @@ body{
         grid-row: 1/2;
     }
 
-    .nav-Link{
+    .nav-Link {
         font-size: 1 rem;
         letter-spacing: none;
         color: #030303;
     }
-    
+
 }
 
-.mapa{
+.mapa {
     margin-top: 25px;
     margin-bottom: 100px;
 }
 
-/*FOOTER CON BOOTSTRAP*/
+/*FOOTER CON BOOTSTRAP bg-dark*/
 
-.footer{
+.footer {
     font-size: 17px;
+    text-align: center;
 }
 
 a:hover {
-    color:crimson !important;
+    color: crimson !important;
 }
 
-.iconos{
+.iconos {
     font-size: 30px;
 }
 
 /*GALERIA*/
 
-.ImagenStaff{
+.ImagenStaff {
     padding: 2vh;
 }
-.galeria{
+
+.galeria {
     width: 100%;
     height: 300px;
 }
-.col-lg-3{
+
+.col-lg-3 {
     margin: 0 !important;
     padding: 25px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    background-color: rgb(247, 247, 247);
+    border: solid #111111;
+}
+
+.Encabezado {
+    text-align: center;
+}
+
+.Establecimiento {
+    background-color: rgb(247, 247, 247);
+    border: solid #080808;
+    margin: 5px;
+    padding: 5px;
+}
+
+.carousel slide {
+    padding: 10px;
 }
 
 .galeria :hover {
     border: 5px solid rgb(199, 199, 79);
 }
 
+/*PRODUCTOS*/
+
+.estiloParrafo {
+    background-color: rgb(247, 247, 247);
+    border: solid #080808;
+}
+
+/*PLANES*/
+.estiloPa {
+    background-color: rgb(21, 175, 149);
+    border: solid #072711;
+    margin: 5px;
+    padding: 5px;
+}
+
+.estiloTabla {
+    background-color: rgb(21, 175, 149);
+    border: solid #000000;
+}
+
 /*NOSOTROS*/
 
-card{
+.card {
     background-color: rgb(199, 199, 79);
 }

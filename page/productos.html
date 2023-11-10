@@ -5,9 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre los mejores productos de fitness en FitCenter Concordia. Equipos de calidad para impulsar tu entrenamiento y mejorar tu salud. ¡Convierte tu hogar en un gimnasio!">
+    <meta name="keywords"
+        content="Productos de fitness FitCenter, Equipos de entrenamiento de calidad, Gimnasio en casa en Concordia, Entrenamiento de alta calidad, Mejora de la salud en Entre Ríos, Compra de equipo de gimnasio, FitCenter Concordia, Gimnasio en tu hogar, Equipos de última generación, Salud y bienestar en Concordia">
     <title>Galeria</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos_boos.css">
+    <link rel="stylesheet" href="../css/imagehover.css-master/css/imagehover.min.css">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -23,14 +30,14 @@
 
         <nav class="nav container" id="nav">
 
-            <a class="nav_Logo" href="../index.html">
+            <a class=" animate__animated animate__bounce animate__backInLeft nav_Logo" href="../index.html">
                 <img class="nav_Logo" src="../assets/img/logoGym.png" alt="logo del gimnacio">
                 <!-- el ancla adentro de una imagen, asi siempre que se intectua con este lo lleve a la pagina principal-->
 
             </a>
 
 
-            <ul class="nav_Links">
+            <ul class="animationNav nav_Links">
                 <li class="nav-Item"><a class="nav-Link" href="../index.html">Inicio</a></li>
 
                 <li class="nav-Item"><a class="nav-Link" href="../page/galeria.html">Galeria</a></li>
@@ -60,11 +67,13 @@
 
                 <div class="row card-body">
 
-                    <h1 class="card-title display-1"> Productos </h1>
+                    <h1 class="card-title display-1"> Fitcenter | Productos </h1>
 
-                    <p class="card-text shadow-lg p-2 mb-2"> Nosotros tambien contamos con un servicio de venta de
-                        insumos de entrenamiento e indumetaria de entrenamiento para poder equipar tu lugar, asi como el
-                        poder entrenar en casa para que puedas tener los mejores materiales para hacerlo
+                    <p class="card-text shadow-lg p-2 mb-2"> Nosotros tambien contamos con un <span>servicio</span> de
+                        venta de
+                        <span>insumos</span> de entrenamiento e <span>indumetaria</span> de entrenamiento para poder
+                        equipar tu lugar, asi como el
+                        poder entrenar en casa para que puedas tener los mejores materiales para hacerlo.
                     </p>
                 </div>
 
@@ -81,8 +90,10 @@
                 <h2 class="display-2"> Indumetaria De Entrenamiento </h2>
 
                 <p class="estiloParrafo mb-4 p-2 mb-2"> Ademas de brindarles el mejor servicio de entrenamiento, tambien
-                    contantamos con indumentaria para que puedas ser aun mas parte de la familia, para brindarte la
-                    mejor calidad y la mejor onda para que puedas entrenar de la mejor manera </p>
+                    contantamos con <span>indumentaria</span> para que puedas ser aun mas parte de la familia,
+                    <span>para brindarte la mejor calidad </span> y que <span>tengas la mejor onda</span> para que
+                    puedas entrenar
+                </p>
 
             </div>
 
@@ -90,25 +101,62 @@
                 <div class="row">
                     <div class="col 12 col-md-4">
 
-                        <img src="../assets/img/indumetaria1.jpg" class="w-100 mx-auto d-block img-fluid img-thumbnail"
-                            alt="indumetaria entrenamiento">
+                        <picture>
+                            <source media="(max-width: 639px)" src="../assets/img/indumetariaMobile1.jpg">
+                            <source media="(min-width: 640px)" src="../assets/img/indumetariaEscritorio1.jpg">
 
+                            <figure class="imghvr-zoom-out-up">
+                                <img src="../assets/img/indumetariaEscritorio1.jpg"
+                                    class="w-100 mx-auto d-block img-fluid img-thumbnail"
+                                    alt="indumetaria entrenamiento">
+
+                                <figcaption>
+                                    <p class="ih-zoom-in ih-delay-md text-center">
+
+                                        <button>Compra Aqui</button>
+                                    </p>
+                                </figcaption>
+                        </picture>
                     </div>
 
                     <div class="col 12 col-md-4">
 
-                        <img src="../assets/img/indumentaria2.jpg" class="w-100 mx-auto d-block img-fluid img-thumbnail"
-                            alt="indumetaria entrenamiento">
+                        <picture>
+                            <source media="(max-width: 639px)" src="../assets/img/indumetariaMobile2.jpg">
+                            <source media="(min-width: 640px)" src="../assets/img/indumetariaEscritorio2.jpg">
 
+                            <figure class="imghvr-zoom-out-up">
+                                <img src="../assets/img/indumetariaEscritorio2.jpg"
+                                    class="w-100 mx-auto d-block img-fluid img-thumbnail"
+                                    alt="indumetaria entrenamiento">
+
+                                <figcaption>
+                                    <p class="ih-zoom-in ih-delay-md text-center">
+
+                                        <button>Compra Aqui</button>
+                                    </p>
+                                </figcaption>
+                        </picture>
                     </div>
 
                     <div class="col 12 col-md-4">
 
-                        <img src="../assets/img/indumentaria3.jpg" class="w-100 mx-auto d-block img-fluid img-thumbnail"
-                            alt="indumetaria entrenamiento">
+                        <picture>
+                            <source media="(max-width: 639px)" srcset="../assets/img/indumetariaMobile3.jpg">
+                            <source media="(min-width: 640px)" srcset="../assets/img/indumetariaEscritorio3.jpg">
+                            <figure class="imghvr-zoom-out-up">
+                                <img src="../assets/img/indumetariaEscritorio3.jpg"
+                                    class="w-100 mx-auto d-block img-fluid img-thumbnail"
+                                    alt="indumetaria entrenamiento">
 
+                                <figcaption>
+                                    <p class="ih-zoom-in ih-delay-md text-center">
+
+                                        <button>Compra Aqui</button>
+                                    </p>
+                                </figcaption>
+                        </picture>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -119,25 +167,51 @@
 
                 <h3 class="display-3"> Insumos De Entrenamiento </h3>
 
-                <p class="estiloParrafo mb-4 p-2"> Disponemos de una gran cantidad de elementos, sean discos y barras de
-                    fundicion asi como la coleccion completa de kettebells, todo para que disponga en su hogar o en su
-                    propio gym los mejores articulos para entrenar </p>
+                <p class="estiloParrafo mb-4 p-2"> Disponemos de una <span> gran cantidad de elementos </span>, sean
+                    discos y barras de fundicion asi como la coleccion completa de kettebells, todo para que disponga en
+                    su hogar o en su propio gym los <span> mejores articulos</span> para entrenar
+                </p>
             </div>
 
             <div class="ImagenSec">
                 <div class="row">
                     <div class="col 12 col-md-6">
 
-                        <img src="../assets/img/insumosEntrenamiento1.jpg"
-                            class="rounded mx-auto d-block img-fluid img-thumbnail" alt="insumos de entrenamiento">
+                        <picture>
+                            <source media="(max-width: 639px)" src="../assets/img/insumoEntrenamientoMobile1.jpg">
+                            <source media="(min-width: 640px)" src="../assets/img/insumosEntrenamientoEscritorio1.jpg">
 
+                            <figure class="imghvr-fold-right">
+                                <img src="../assets/img/insumosEntrenamientoEscritorio1.jpg"
+                                    class="rounded mx-auto d-block img-fluid img-thumbnail w-100"
+                                    alt="insumos de entrenamiento1">
+                                <figcaption>
+                                    <p class="ih-zoom-in ih-delay-md text-center">
+
+                                        <button>Conseguir insumos aqui</button>
+                                    </p>
+                                </figcaption>
+                        </picture>
 
                     </div>
 
                     <div class="col 12 col-md-6">
 
-                        <img src="../assets/img/insumosEntrenamiento2.jpg"
-                            class="rounded mx-auto d-block img-fluid img-thumbnail" alt="insumos de entrenamiento">
+                        <picture>
+                            <source media="(max-width: 639px)" src="../assets/img/insumoEntrenamientoMobile2.jpg">
+                            <source media="(min-width: 640px)" src="../assets/img/insumosEntrenamientoEscritrorio2.jpg">
+
+                            <figure class="imghvr-fold-right">
+                                <img src="../assets/img/insumosEntrenamientoEscritrorio2.jpg"
+                                    class="rounded mx-auto d-block img-fluid img-thumbnail w-100"
+                                    alt="insumos de entrenamiento2">
+                                <figcaption>
+                                    <p class="ih-zoom-in ih-delay-md text-center">
+
+                                        <button>Conseguir insumos aqui</button>
+                                    </p>
+                                </figcaption>
+                        </picture>
 
                     </div>
 
@@ -166,20 +240,20 @@
                                 <div>
                                     <label for="nombre"> <i class="bi bi-person-fill"></i> Nombre</label>
                                     <input type="text" class="form-control" name="nombre" id="nombre"
-                                        placeholder="ej: Gabriel" required>
+                                        placeholder="ej: Santiago" required>
                                     <div class="nombre text-danger "></div>
                                 </div>
                                 <div>
                                     <label for="apellido"> <i class="bi bi-person-bounding-box"></i> Apellido</label>
                                     <input type="text" class="form-control" name="apellido" id="apellido"
-                                        placeholder="ej: Pacheco" required>
+                                        placeholder="ej: Ocampo" required>
                                     <div class="apellido text-danger"></div>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <label for="correo"><i class="bi bi-envelope-fill"></i> Correo</label>
                                 <input type="email" class="form-control" name="correo" id="correo"
-                                    placeholder="ej: gpmcheco@mail.com" required>
+                                    placeholder="ej: personal@mail.com" required>
                                 <div class="correo text-danger"></div>
 
                             </div>

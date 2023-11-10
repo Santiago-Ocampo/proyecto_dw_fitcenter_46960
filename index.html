@@ -5,7 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre FitCenter Concordia: Tu destino para una vida activa y saludable en Entre Ríos. Nuestro gimnasio te ofrece las mejores instalaciones y programas de fitness para lograr tus metas. ¡Únete a la revolución del bienestar hoy!">
+    <meta name="keywords"
+        content="Gimnasio Concordia Entre Ríos, FitCenter Concordia, Entrenamiento en Concordia, Fitness en Entre Ríos, Salud y bienestar en Concordia, Clases de fitness en FitCenter, Equipos de entrenamiento en Concordia, Programas de acondicionamiento físico, Entrenadores personales en FitCenter, Gimnasio de calidad en Entre Ríos">
     <title>FitCenter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilos_boos.css">
 
@@ -25,11 +31,12 @@
 
             <a class="nav_Logo" href="./index.html">
 
-                <img class="nav_Logo" src="./assets/img/logoGym.png" alt="logo del gimnacio">
+                <img class=" animate__animated animate__bounce animate__backInLeft nav_Logo"
+                    src="./assets/img/logoGym.png" alt="logo del gimnacio">
                 <!-- el ancla adentro de una imagen, asi siempre que se intectua con este lo lleve a la pagina principal-->
             </a>
 
-            <ul class="nav_Links">
+            <ul class="animationNav nav_Links">
                 <li class="nav-Item"><a class="nav-Link" href="./index.html"> Inicio </a></li>
 
                 <li class="nav-Item"><a class="nav-Link" href="./page/galeria.html"> Galeria </a></li>
@@ -59,45 +66,64 @@
 
         <section class="container-xl mt-5 mb-4">
 
-            <h1 class="display-1">Que es fitcenter</h1>
+            <h1 class="display-1">Que es Fitcenter</h1>
 
-            <p> Este es un centro de entrenamiento en la cual nos enfocamos en el entrenamiento de la fuerza, tanto sea
-                para nivel estetico, como rutinas y ejercicios adaptados para deportistas, pensonas longebas y/o con
-                cualquier tipo de dificultad o particularidades, siempre garantizando el mejor trato y apuntando siempre
-                a una vida saludable y la mejor calidad de vida </p>
+            <p> Este es un centro de entrenamiento en la cual nos <span>enfocamos en el entrenamiento de la
+                    fuerza</span>, tanto sea para nivel estetico, como rutinas y ejercicios adaptados para deportistas,
+                pensonas longebas y/o con cualquier tipo de dificultad o particularidades, siempre <span>garantizando el
+                    mejor trato</span> y <span>apuntando siempre a una vida saludable</span> y la mejor calidad de vida
+            </p>
 
         </section>
 
-        <section class="container-xl mt-5 mb-4">
+        <section class="Galeria container-xl mt-5 mb-4">
 
             <div class="row">
 
                 <h2 class="display-2">Alumnos Entrenando</h2>
 
-                <p> Con nosotros podras realizar entrenamientos de musculacion, funcional, muchas clases de challenge al
-                    aire libre en epocas de primavera verano, levantamiento olimpico para principiantes.</p>
+                <p> Con nosotros podras realizar <span>entrenamientos de musculacion</span>, <span>funcional</span>,
+                    muchas clases de challenge al aire libre en epocas de primavera verano, <span>levantamiento
+                        olimpico</span> para principiantes.</p>
 
-                <div class="ImagenSec">
+                <div class="ImagenSec ">
 
-                    <div class="row">
+                    <div class="Contenedor row">
+
                         <div class="col 12 col-md-4">
 
-                            <img src="./assets/img/alumnoEntrenando1.jpg"
-                                class="rounded mx-auto d-block img-fluid img-thumbnail w-100" alt="alumno entrenando">
-
+                            <picture>
+                                <source media="(max-width: 639px)" src="./assets/img/alumnoEntrenandoMobile1.jpg">
+                                <source media="(min-width: 640px)"
+                                    src="./assets/img/alumnoEntrenandoEscritorio1.jpg">
+                                <img src="./assets/img/alumnoEntrenandoEscritorio1.jpg"
+                                    class="rounded mx-auto d-block img-fluid img-thumbnail w-100"
+                                    alt="alumno entrenando">
+                            </picture>
                         </div>
 
                         <div class="col 12 col-md-4">
 
-                            <img src="./assets/img/alumnoEntrenando2.jpg"
-                                class="rounded mx-auto d-block img-fluid img-thumbnail w-100" alt="alumno entrenando">
-
+                            <picture>
+                                <source media="(max-width: 639px)" src="./assets/img/alumnoEntrenandoMobile2.jpg">
+                                <source media="(min-width: 640px)"
+                                    src="./assets/img/alumnoEntrenandoEscritorio2.jpg">
+                                <img src="./assets/img/alumnoEntrenandoEscritorio2.jpg"
+                                    class="rounded mx-auto d-block img-fluid img-thumbnail w-100"
+                                    alt="alumno entrenando">
+                            </picture>
                         </div>
 
-                        <div class="col 12 col-md-4">
+                        <div class=" col 12 col-md-4">
 
-                            <img src="./assets/img/alumnoEntrenando3.jpg"
-                                class="rounded mx-auto d-block img-fluid img-thumbnail w-100" alt="alumno entrenando">
+                            <picture>
+                                <source media="(max-width: 639px)" src="./assets/img/alumnoEntrenandoMobile3.jpg">
+                                <source media="(min-width: 640px)"
+                                    src="./assets/img/alumnoEntrenandoEscritorio3.jpg">
+                                <img src="./assets/img/alumnoEntrenandoEscritorio3.jpg"
+                                    class="rounded mx-auto d-block img-fluid img-thumbnail w-100"
+                                    alt="alumno entrenando">
+                            </picture>
 
                         </div>
                     </div>
@@ -110,17 +136,18 @@
 
             <h3 class="display-3"> Viajes con nuentra gente y challenge </h3>
 
-            <p> El Challenge Training se trata de un entrenamiento descontracturado, invitando a nuestros alumnos a
-                salir de las instalaciones del gimnasio, para poder entrenar al aire libre, la idea del mismo es
-                conectar con la naturaleza mezclado con entrenamiento de calidad poniendo a prueba la resistencia y
-                fuerza del alumno. </p>
+            <p> El Challenge Training se trata de un <span>entrenamiento descontracturado</span>, invitando a nuestros
+                alumnos a salir de las instalaciones del gimnasio, para poder <span>entrenar al aire libre</span>, la
+                idea del mismo es <span>conectar con la naturaleza</span> mezclado con entrenamiento de calidad
+                <span>poniendo a prueba la resistencia y fuerza del alumno.</span>
+            </p>
 
-            <div class="ImagenSec container fluid">
+            <div class="ImagenSec2 container fluid">
                 <div class="row">
                     <div class="col-xl">
 
-                        <img src="./assets/img/challege.jpg"
-                            class="rounded mx-auto d-block img-fluid img-thumbnail" alt="entrenamiento al aire libre ">
+                        <img src="./assets/img/challege.jpg" class="rounded mx-auto d-block img-fluid img-thumbnail"
+                            alt="entrenamiento al aire libre ">
 
                     </div>
                 </div>
@@ -131,9 +158,11 @@
 
             <h4 class="display-4">Donde Encontrarnos</h4>
 
-            <p> Puedes encotrarnos en unos de los accesos mas comodos de la ciudad de Concordia Entre Rios, a minutos
-                del centro de la ciudad, esta ubicacion estrategica es para poder estar cerca de ustedes y que sean
-                parte de nuestra gran familia </p>
+            <p> <span>Puedes encotrarnos</span> en unos de los <span>accesos mas comodos de la ciudad</span> de
+                Concordia
+                Entre Rios, <span>a minutos del centro de la ciudad</span>, esta ubicacion estrategica es para poder
+                estar cerca de ustedes y que sean parte de nuestra gran familia
+            </p>
 
             <div class="mapa container fluid">
                 <div class="row">

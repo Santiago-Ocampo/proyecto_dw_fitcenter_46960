@@ -389,7 +389,9 @@ a:hover {
 }
 
 /*PLANES*/
-
+.imghvr-{
+    background-color: #D14233;
+}
 .ImagenSec3 {
     display: grid;
     place-items: center;

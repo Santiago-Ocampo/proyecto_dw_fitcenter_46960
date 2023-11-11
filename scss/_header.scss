@@ -1,0 +1,255 @@
+/*INCIDE RESPONSIVE CON BOOTSTRAP Y GRID, PARA TODA LA PAGINA*/
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../assets/img/fondoHeader.jpg);
+    background-size: cover;
+    min-height: 300px;
+    height: 50vh;
+    color: #070707;
+
+    .conteiner {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .nav {
+        --state-Close: scale(0);
+        --state-Hambur: scale(1);
+        --state-menu: translate(-100%);
+
+        padding: 50px 15;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: repeat(2, max-content);
+
+        .nav_Logo {
+            font-size: 2 rem;
+            z-index: 1;
+        }
+
+        .animationNav {
+            font-family: $tipografia-general;
+            text-align: $ubicacion-texto;
+            text-transform: uppercase;
+            font-weight: 200;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-sizing: border-box;
+        }
+
+        .animationNav li {
+            display: inline-block;
+            list-style: outside none none;
+            margin: 0.2em 0.2em;
+            overflow: hidden;
+            position: relative;
+            border-radius: 2px;
+
+            &:before {
+                bottom: 0%;
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+            }
+
+            &:after {
+                bottom: 50%;
+                -webkit-transition-delay: 0.1s;
+                transition-delay: 0.1s;
+            }
+
+            &:before,
+            &:after {
+                display: block;
+            }
+
+            &:before,
+            &:after {
+                background-color: #535151;
+                position: absolute;
+                height: 25%;
+                left: 50%;
+                right: 50%;
+                content: '';
+                z-index: -1;
+                opacity: 0;
+                -webkit-transition: all 0.3s steps(4);
+                transition: all 0.3s steps(4);
+            }
+
+            &:hover,&:before,
+            .current,&:before,
+            &:hover,&:after,
+            .current,&:after,
+            &:hover a,&:before,
+            .current a,&:before,
+            &:hover a,&:after,
+            .current a,&:after{
+                left: 0;
+                right: 0;
+                opacity: 1;
+            }
+
+            &:hover,&:before,
+            .current,&:before{
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s; 
+            }
+
+            &:hover,&:after,
+            .current,&:after{
+                -webkit-transition-delay: 0.2s;
+                transition-delay: 0.2s;
+            }
+
+            &:hover a,&:before,
+            .current a,&:before{
+                -webkit-transition-delay: 0.1s;
+                transition-delay: 0.1s;
+            }
+
+            &:hover a,&:after,
+            .current a,&:after{
+                -webkit-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+            }
+        }
+
+        .animationNav a {
+            backface-visibility: hidden;
+            color: #f8eded;
+            display: block;
+            padding: 0.5em 1em;
+            position: relative;
+            text-align: $ubicacion-texto;
+            text-decoration: none;
+
+            &:before {
+                bottom: 25%;
+                -webkit-transition-delay: 0.05s;
+                transition-delay: 0.05s;
+            }
+
+            &:after {
+                bottom: 75%;
+                -webkit-transition-delay: 0.15s;
+                transition-delay: 0.15s;
+            }
+
+            &:hover {
+                color: #bbb7b7;
+            }
+
+            &:before,
+            &:after {
+                background-color: #535151;
+                position: absolute;
+                height: 25%;
+                left: 50%;
+                right: 50%;
+                content: '';
+                z-index: -1;
+                opacity: 0;
+                -webkit-transition: all 0.3s steps(4);
+                transition: all 0.3s steps(4);
+            }
+        }
+
+        .nav_Links {
+
+            background-color: rgb(207, 173, 72);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+
+            display: grid;
+            align-content: center;
+            gap: 1.5 em;
+            padding-left: 5%;
+
+            transform: var(--state-menu);
+            transition: .3s transform;
+
+            .nav-Item {
+                list-style: none;
+
+            }
+
+            .nav-Link {
+                color: #070505;
+                text-decoration: none;
+                font-size: 1.2 rem;
+                letter-spacing: 2px;
+                font-weight: bolder;
+            }
+        }
+
+        .nav_Hambur {
+            transform: var(--state-Hambur);
+
+            .nav_Icon {
+                width: 40px;
+            }
+
+        }
+
+        .nav_Close {
+            transform: var(--state-Close);
+
+            .nav_Icon {
+                width: 40px;
+            }
+        }
+
+        .nav_Hambur,
+        .nav_Close {
+            cursor: pointer;
+            grid-column: -2/-1;
+            grid-row: 1/2;
+            transition: .4s transform;
+        }
+
+        &:target {
+            --state-menu: translate(0);
+            --state-Close: scale(1);
+            --state-Hambur: scale(0);
+        }
+    }
+}
+
+
+@media (min-width:768px) {
+
+    .header {
+        .nav {
+            --state-Hambur: scale(0);
+            --state-menu: translate(0);
+
+            &:target {
+                --state-Close: scale(0);
+            }
+
+            .nav_Links {
+
+                padding: 15px;
+                background-color: unset;
+                position: unset;
+                gap: 1.5em;
+                grid-auto-flow: column;
+                transform: unset;
+                grid-column: -2/-1;
+                grid-row: 1/2;
+
+                .nav-Link {
+                    font-size: 1rem;
+                    letter-spacing: none;
+                    color: #030303;
+                }
+            }
+        }
+    }
+}

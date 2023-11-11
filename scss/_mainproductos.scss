@@ -1,0 +1,8 @@
+/*PRODUCTOS*/
+
+/*ACA SEGUN LO PEDIDO POR LA PREENTREGA3 UTILICE UN MAPA EN MI SASS*/
+
+.estiloParrafo {
+    background-color: rgb(247, 247, 247);
+    border: map-get($bordes ,borde-solid-dospixel);
+}

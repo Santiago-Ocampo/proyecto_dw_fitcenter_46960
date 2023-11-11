@@ -1,0 +1,38 @@
+/*GALERIA*/
+
+.ImagenStaff {
+    padding: 2vh;
+}
+
+.col-lg-3 {
+    margin: 0;
+    padding: 25px;
+}
+
+.card-title {
+    text-align: $ubicacion-texto;
+}
+
+.card-text {
+    background-color: rgb(247, 247, 247);
+    border: solid #111111;
+}
+
+.Encabezado {
+    text-align: $ubicacion-texto;
+}
+
+
+/*ACA SEGUN LO PEDIDO POR LA PREENTREGA3 UTILICE UN EXTEND EN MI SASS*/
+
+.carousel slide {
+    padding: 5px;
+}
+
+.Establecimiento {
+
+    @extend .carousel;
+    background-color: rgb(247, 247, 247);
+    border: solid #080808;
+    margin: 5px;
+}

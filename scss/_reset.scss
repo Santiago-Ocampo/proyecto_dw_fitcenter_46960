@@ -1,0 +1,14 @@
+/*EDICION INICIAL DE LA PAGINA*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: $tipografia-general;
+    background: rgb(106, 110, 110);
+    background: linear-gradient(0deg, rgba(106, 110, 110, 1) 7%, rgba(227, 102, 190, 1) 38%, rgba(217, 172, 66, 1) 77%);
+    /*background-color: rgb(199, 199, 79)*/
+}

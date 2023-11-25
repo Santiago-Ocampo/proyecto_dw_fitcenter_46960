@@ -1,17 +1,49 @@
 /*PLANES*/
 
+.seccionPlanes{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+
+
+}
+
 .estiloPa {
     background-color: rgb(21, 175, 149);
     border: solid #072711;
     margin: 5px;
     padding: 5px;
+
     .ImagenSec3 {
         display: grid;
         place-items: center;
+        margin: 10px;
+    }
+
+    .button {
+        margin-right: 50px;
+        text-align: center;
+        .bTp{
+            padding: 1rem;
+            width: 25%;
+            background-color: azure;
+            border: none;
+            outline: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
     }
 }
 
-.estiloTabla {
+.estiloTabla,
+th,
+td {
     background-color: rgb(21, 175, 149);
     border: solid #000000;
+    border-collapse: collapse;
 }

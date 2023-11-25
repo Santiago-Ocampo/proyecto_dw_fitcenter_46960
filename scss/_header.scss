@@ -1,12 +1,12 @@
 /*INCIDE RESPONSIVE CON BOOTSTRAP Y GRID, PARA TODA LA PAGINA*/
 
+
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../assets/img/fondoHeader.jpg);
     background-size: cover;
     min-height: 300px;
     height: 50vh;
     color: #070707;
-
     .conteiner {
         margin: 0 auto;
         width: 90%;
@@ -18,14 +18,14 @@
         --state-Hambur: scale(1);
         --state-menu: translate(-100%);
 
-        padding: 50px 15;
+        padding: 0;
         display: grid;
         justify-content: space-between;
         align-items: center;
         grid-template-columns: repeat(2, max-content);
 
         .nav_Logo {
-            font-size: 2 rem;
+            font-size: 0.2px;
             z-index: 1;
         }
 
@@ -33,7 +33,7 @@
             font-family: $tipografia-general;
             text-align: $ubicacion-texto;
             text-transform: uppercase;
-            font-weight: 200;
+            font-weight: 100;
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
             box-sizing: border-box;
@@ -45,7 +45,7 @@
             margin: 0.2em 0.2em;
             overflow: hidden;
             position: relative;
-            border-radius: 2px;
+            border-radius: 3px;
 
             &:before {
                 bottom: 0%;
@@ -54,7 +54,7 @@
             }
 
             &:after {
-                bottom: 50%;
+                bottom: 25%;
                 -webkit-transition-delay: 0.1s;
                 transition-delay: 0.1s;
             }
@@ -66,10 +66,10 @@
 
             &:before,
             &:after {
-                background-color: #535151;
+                background-color: #a5a5d3;
                 position: absolute;
-                height: 25%;
-                left: 50%;
+                height: 60%;
+                left: 60%;
                 right: 50%;
                 content: '';
                 z-index: -1;
@@ -88,7 +88,7 @@
             .current a,&:after{
                 left: 0;
                 right: 0;
-                opacity: 1;
+                opacity: 5;
             }
 
             &:hover,&:before,
@@ -118,16 +118,16 @@
 
         .animationNav a {
             backface-visibility: hidden;
-            color: #f8eded;
+            color:black;
             display: block;
-            padding: 0.5em 1em;
+            padding: 0.5em 1.5em;
             position: relative;
             text-align: $ubicacion-texto;
             text-decoration: none;
 
             &:before {
-                bottom: 25%;
-                -webkit-transition-delay: 0.05s;
+                bottom: 50%;
+                -webkit-transition-delay: 0.5s;
                 transition-delay: 0.05s;
             }
 
@@ -138,14 +138,15 @@
             }
 
             &:hover {
-                color: #bbb7b7;
+                background:blanchedalmond;
+                transition: .5s;
             }
 
             &:before,
             &:after {
                 background-color: #535151;
                 position: absolute;
-                height: 25%;
+                height: 60%;
                 left: 50%;
                 right: 50%;
                 content: '';
@@ -235,14 +236,14 @@
 
             .nav_Links {
 
-                padding: 15px;
+                padding: 5px;
                 background-color: unset;
                 position: unset;
                 gap: 1.5em;
                 grid-auto-flow: column;
                 transform: unset;
                 grid-column: -2/-1;
-                grid-row: 1/2;
+                grid-row: 1/5;
 
                 .nav-Link {
                     font-size: 1rem;

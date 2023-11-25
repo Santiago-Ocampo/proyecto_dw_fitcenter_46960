@@ -6,3 +6,32 @@
     background-color: rgb(247, 247, 247);
     border: map-get($bordes ,borde-solid-dospixel);
 }
+
+.botonCompraPosicion{
+    padding: 5vh;
+    .botonCompra{
+        padding: 2vh;
+        width: 100%;
+        background-color: azure;
+        border: none;
+        outline: none;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.textoProductos{
+    padding: 10vh;
+    font-size: 18px;
+}
+
+.ImagenSecProductos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 32px;
+}
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--configuraciones del navegador-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre FitCenter Concordia: Tu destino para una vida activa y saludable en Entre Ríos. Nuestro gimnasio te ofrece las mejores instalaciones y programas de fitness para lograr tus metas. ¡Únete a la revolución del bienestar hoy!">
+    <meta name="keywords"
+        content="Gimnasio Concordia Entre Ríos, FitCenter Concordia, Entrenamiento en Concordia, Fitness en Entre Ríos, Salud y bienestar en Concordia, Clases de fitness en FitCenter, Equipos de entrenamiento en Concordia, Programas de acondicionamiento físico, Entrenadores personales en FitCenter, Gimnasio de calidad en Entre Ríos">
+    <title>Carrito de compras</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos_boos.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- icono de fontawesome -->
+    <script src="https://kit.fontawesome.com/ae0e91b7e7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="nav container" id="nav">
+
+            <a class="nav_Logo" href="../index.html">
+
+                <img class=" animate__animated animate__bounce animate__backInLeft" src="../assets/img/logoGym.png"
+                    alt="logo del gimnacio">
+                <!-- el ancla adentro de una imagen, asi siempre que se intectua con este lo lleve a la pagina principal-->
+            </a>
+
+            <ul class="animationNav nav_Links">
+                <li class="nav-Item"><a class="nav-Link" href="../index.html"> Inicio </a></li>
+
+                <li class="nav-Item"><a class="nav-Link" href="./galeria.html"> Galeria </a></li>
+
+                <li class="nav-Item"><a class="nav-Link" href="./productos.html"> Productos </a></li>
+
+                <li class="nav-Item"><a class="nav-Link" href="./planes.html"> Planes </a></li>
+
+                <li class="nav-Item"><a class="nav-Link" href="./nosotros.html"> Nosotros </a></li>
+
+                <li id="cabecera" class="nav-Item"> <a class="nav-Link" href="./carrito.html"><i
+                            class="fa-solid fa-cart-shopping"><span id="numero">0</span></i></a></li>
+
+            </ul>
+
+            <a href="#nav" class="nav_Hambur">
+                <img src="../assets/img/menuHamburguesa.png" class="nav_Icon">
+            </a>
+
+            <a href="#nav" class="nav_Close">
+                <img src="../assets/img/menuEquis.png" class="nav_Icon">
+            </a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="productos" class="productos">
+            <h2 class="text-center">Productos</h2>
+            <ul id="lista-productos">
+                <!-- Aquí se generará dinámicamente la lista de productos -->
+            </ul>
+        </section>
+
+        <section id="carrito" class="carrito fluid mt-5 mb-4">
+            <h2 class="text-center display-2">Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p id="subtotal">Subtotal: $0</p>
+            <p id="total">Total: $0</p>
+            <button class="botonCarrito" id="vaciar-carrito">Vaciar Carrito</button>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white-50 pt-5 pb-4">
+
+        <div class="iconos container-xl text-center text-md-star">
+
+            <a target="_blank" href="www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+            <a target="_blank" href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <hr class="mb-3">
+
+        <div class="footer d-flex justify-content-center text-md-star">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <p class="font-weigth-bold"> M. Tavella 1421 </p>
+                <p class="font-weigth-bold"> Telefono: 345-4567891 </p>
+                <p class="font-weigth-bold"> FitCenterGym@gmail.com </p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="../js/carrito.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

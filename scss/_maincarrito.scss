@@ -1,0 +1,76 @@
+// Estilos para la sección de productos
+#productos {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+// Estilos para la sección de carrito
+#carrito {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .botonCarrito {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #bd2130;
+    }
+  }
+}

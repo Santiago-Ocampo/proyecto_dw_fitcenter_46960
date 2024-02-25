@@ -40,6 +40,9 @@ function agregarAlCarrito(id) {
         }
         mostrarCarrito();
     }
+    // Mostrar el contador del carrito
+    mostrarContadorCarrito();
+    guardarCarritoEnLocalStorage();
 }
 
 // Evento para agregar productos al carrito
@@ -52,6 +55,7 @@ document.getElementById("lista-productos").addEventListener("click", function (e
 
 // Función para mostrar el contenido del carrito
 function mostrarCarrito() {
+
     const listaCarrito = document.getElementById("lista-carrito");
     listaCarrito.innerHTML = "";
     carrito.forEach(item => {
@@ -60,6 +64,9 @@ function mostrarCarrito() {
         listaCarrito.appendChild(li);
     });
     calcularTotal();
+    // Mostrar el contador del carrito
+    mostrarContadorCarrito();
+
 }
 
 // Función para calcular el subtotal y total del carrito
@@ -78,8 +85,26 @@ function calcularDescuento(subtotal) {
 
 // Evento para vaciar el carrito
 document.getElementById("vaciar-carrito").addEventListener("click", function () {
-    vaciarCarrito();
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "¿Quieres vaciar el carrito?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d030d6',
+        cancelButtonColor: '010023',
+        confirmButtonText: 'Sí, vaciar carrito'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            vaciarCarrito();
+            Swal.fire(
+                'Carrito vaciado',
+                'El carrito ha sido vaciado correctamente.',
+                'success'
+            );
+        }
+    });
 });
+
 
 // Función para guardar el carrito en Local Storage
 function guardarCarritoEnLocalStorage() {
@@ -102,10 +127,118 @@ function vaciarCarrito() {
     mostrarCarrito();
 }
 
+function mostrarContadorCarrito() {
+    const contador = document.getElementById("contador-carrito");
+    contador.textContent = carrito.reduce((total, item) => total + item.cantidad, 0);
+}
 
-
-
-// Inicialización
 mostrarProductos();
 cargarCarritoDesdeLocalStorage();
+
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(id) {
+    const producto = productos.find(item => item.id === id);
+    if (producto) {
+        const itemEnCarrito = carrito.find(item => item.id === id);
+        if (itemEnCarrito) {
+            itemEnCarrito.cantidad++;
+        } else {
+            carrito.push({ ...producto, cantidad: 1 });
+        }
+        mostrarCarrito();
+        // Mostrar cartel de confirmación
+        mostrarCartelConfirmacion(producto);
+    }
+    // Mostrar el contador del carrito
+    mostrarContadorCarrito();
+    guardarCarritoEnLocalStorage();
+}
+
+// Función para mostrar el cartel de confirmación
+function mostrarCartelConfirmacion(producto) {
+    Swal.fire({
+        title: 'Producto Agregado!',
+        text: `Se agregó ${producto.nombre} al carrito.`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
+    mostrarCarritosOrdenados();
+
+}
+
+
+document.getElementById("btn-generar-receta").addEventListener("click", function() {
+    const tipoEntrenamiento = document.getElementById("tipo-entrenamiento").value;
+    obtenerRecetaPorTipoEntrenamiento(tipoEntrenamiento);
+});
+
+function obtenerRecetaPorTipoEntrenamiento(tipoEntrenamiento) {
+    // Hacer una solicitud a la API de TheMealDB para obtener una receta aleatoria basada en el tipo de entrenamiento
+    fetch(`https://www.themealdb.com/api/json/v1/1/random.php?c=${tipoEntrenamiento}`)
+    .then(response => response.json())
+    .then(data => {
+        // Mostrar la receta en la página web
+        mostrarReceta(data.meals[0]);
+    })
+    .catch(error => {
+        console.error("Error al obtener la receta:", error);
+    });
+}
+
+function mostrarReceta(receta) {
+    const recetaContainer = document.getElementById("receta");
+    recetaContainer.innerHTML = `
+        <h2>${receta.strMeal}</h2>
+        <img src="${receta.strMealThumb}" alt="Imagen de la receta">
+        <h3>Ingredientes:</h3>
+        <ul>
+            ${listarIngredientes(receta)}
+        </ul>
+        <h3>Instrucciones de preparación:</h3>
+        <p>${receta.strInstructions}</p>
+    `;
+}
+
+function listarIngredientes(receta) {
+    let ingredientes = "";
+    for (let i = 1; i <= 20; i++) {
+        if (receta[`strIngredient${i}`]) {
+            ingredientes += `<li>${receta[`strMeasure${i}`]} ${receta[`strIngredient${i}`]}</li>`;
+        }
+    }
+    return ingredientes;
+}
+
+
+function agregarNuevoUsuario() {
+    const nuevoUsuario = {
+        username: "nuevo_usuario",
+        email: "nuevo_usuario@example.com",
+        password: "contraseña123",
+        // Otros datos del usuario que desees agregar
+    };
+
+    fetch('https://fakestoreapi.com/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(nuevoUsuario),
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Usuario agregado correctamente');
+            // Realizar acciones adicionales si el usuario se ha agregado correctamente
+        } else {
+            console.error('Error al agregar el usuario');
+            // Manejar el error de acuerdo a tus necesidades
+        }
+    })
+    .catch(error => {
+        console.error('Error de red:', error);
+        // Manejar el error de red de acuerdo a tus necesidades
+    });
+}
+
 

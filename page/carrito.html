@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos_boos.css">
-
+    <link rel="stylesheet" href="../css/imagehover.css-master/css/imagehover.min.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 
@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="fondoCarrito">
     <header class="header">
 
         <nav class="nav container" id="nav">
@@ -46,8 +46,8 @@
 
                 <li class="nav-Item"><a class="nav-Link" href="./nosotros.html"> Nosotros </a></li>
 
-                <li id="cabecera" class="nav-Item"> <a class="nav-Link" href="./carrito.html"><i
-                            class="fa-solid fa-cart-shopping"><span id="numero">0</span></i></a></li>
+                <li id="carrito-icono" class="nav-Item"> <a class="nav-Link" href="../page/carrito.html"><i
+                            class="fa-solid fa-cart-shopping"><span id="contador-carrito">0</span></i></a></li>
 
             </ul>
 
@@ -62,21 +62,51 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
 
-        <section id="productos" class="productos">
-            <h2 class="text-center">Productos</h2>
-            <ul id="lista-productos">
-                <!-- Aquí se generará dinámicamente la lista de productos -->
-            </ul>
+        <div class="row card-body">
+            <h1 class="card-title display-1"> Fitcenter | Carrito de Compras </h1>
+            <p class="card-text shadow-lg p-2 mb-2"> Bienvenidos a nuestro <span>servicio</span> de
+                carrito de compras, aqui podras adquirir los
+                <span>insumos</span> de entrenamiento e <span>indumetaria</span> de entrenamiento para poder
+                equipar tu lugar, asi como los diferentes <span>planes</span> de entrenamiento
+            </p>
+        </div>
+
+
+        <section class="productos fluid mt-5 mb-4" id="productos">
+            <h2 class="text-center Encabezado display-2">Productos Y Servicios</h2>
+            <ul class="lista-productos" id="lista-productos"></ul>
+
+
+
+            <div id="carrito" class="carrito fluid mt-5 mb-4">
+                <ul class="lista-carrito" id="lista-carrito"></ul>
+                <p id="subtotal">Subtotal: $0</p>
+                <p id="total">Total: $0</p>
+                <a class="ih-fade-up ih-delay-lg botonCarrito">
+                    <button class="ih-fade-up ih-delay-lg button" id="vaciar-carrito">Vaciar Carrito</button>
+                </a>
+            </div>
+
         </section>
 
-        <section id="carrito" class="carrito fluid mt-5 mb-4">
-            <h2 class="text-center display-2">Carrito de Compras</h2>
-            <ul id="lista-carrito"></ul>
-            <p id="subtotal">Subtotal: $0</p>
-            <p id="total">Total: $0</p>
-            <button class="botonCarrito" id="vaciar-carrito">Vaciar Carrito</button>
+        <section>
+            <h3 class="text-center Encabezado">Recomendaciones de comidas según el tipo de entrenamiento</h3>
+            <label for="tipo-entrenamiento">Selecciona el tipo de entrenamiento:</label>
+            <select id="tipo-entrenamiento">
+                <option value="cardio">Cardio</option>
+                <option value="fuerza">Fuerza</option>
+            </select>
+
+            <a class="ih-fade-up ih-delay-lg button">
+                <button class="ih-fade-up ih-delay-lg button" id="btn-generar-receta">Generar Recomendación de
+                    Comida</button>
+            </a>
+
+            <div id="receta">
+                <!-- Aquí se mostrará la receta obtenida de la API -->
+            </div>
         </section>
 
     </main>
@@ -101,8 +131,9 @@
         </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/carrito.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
 
 
 </body>

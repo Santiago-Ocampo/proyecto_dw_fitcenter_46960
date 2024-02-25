@@ -211,34 +211,4 @@ function listarIngredientes(receta) {
 }
 
 
-function agregarNuevoUsuario() {
-    const nuevoUsuario = {
-        username: "nuevo_usuario",
-        email: "nuevo_usuario@example.com",
-        password: "contraseña123",
-        // Otros datos del usuario que desees agregar
-    };
-
-    fetch('https://fakestoreapi.com/users', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(nuevoUsuario),
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('Usuario agregado correctamente');
-            // Realizar acciones adicionales si el usuario se ha agregado correctamente
-        } else {
-            console.error('Error al agregar el usuario');
-            // Manejar el error de acuerdo a tus necesidades
-        }
-    })
-    .catch(error => {
-        console.error('Error de red:', error);
-        // Manejar el error de red de acuerdo a tus necesidades
-    });
-}
-
 
